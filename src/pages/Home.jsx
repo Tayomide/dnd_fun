@@ -16,7 +16,7 @@ export const Home = () => {
         </div>
       </div> {/* Do this later */}
       <div className='content'>
-        <Navbar />
+        {/* <Navbar /> */}
         <ul className="cards">
           <li>
             <Card name="Xeno Colossius" img_url="https://cdn.dribbble.com/users/6122742/screenshots/14806905/media/7a6896b3fadb76f20bd0e1b39a08f455.png" link="https://dribbble.com/shots/15826563-Xeno-Colossius"/>
@@ -98,7 +98,8 @@ const Container = styled.div`
     box-shadow: 0px -10px 15px rgba(127, 132, 128, 0.6);
     /* &:hover {
     } */
-    padding-bottom: 2em;
+    padding: 2em 0;
+
 
     .cards{
       list-style: none;
