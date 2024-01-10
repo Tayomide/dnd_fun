@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'Arrancar';
+  src: url('./Arrancar.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rellanic';
+  src: url("./Rellanic-Agx7.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* html{
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
+}
+
+body{
+  width: inherit;
+  height: max-content;
+  overflow-x: hidden;
+} */
