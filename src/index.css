@@ -1,13 +1,13 @@
 @font-face {
   font-family: 'Arrancar';
-  src: url('./Arrancar.ttf') format('truetype');
+  src: url('Arrancar.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Rellanic';
-  src: url("./Rellanic-Agx7.ttf") format("truetype");
+  src: url("Rellanic-Agx7.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
