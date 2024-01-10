@@ -66,7 +66,9 @@ export const Home = () => {
           <li>
             <Card
               name="Angel"
-              img_url="https://cdn.dribbble.com/users/6122742/screenshots/15826938/media/3841462f43b4a67c8f65e38b58698d2f.png" />
+              img_url="https://cdn.dribbble.com/users/6122742/screenshots/15826938/media/3841462f43b4a67c8f65e38b58698d2f.png"
+              link="https://dribbble.com/shots/15826938-Angel"
+            />
           </li>
           <li>
             <Card
@@ -107,6 +109,7 @@ export const Home = () => {
           </li>
         </ul>
       </div>
+      <div className='preload'></div> {/* Preload images for better performance */}
     </Container>
   )
 }
@@ -129,12 +132,17 @@ const Container = styled.div`
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
-      padding: 2rem; 
-      transition: background-color 0.3s ease;
+      padding: 2rem;
+      font-family: 'Rellanic';
+      // Delete hover effect if it's ugly or not needed
+      /* &:hover{
+        font-family: 'Arrancar';
+        font-size: 1.2em;
+      } */
+      // ugly
       h1, p{
         color: #ffffff;
         text-shadow: 0 0 20px #000000;
-        font-family: 'Rellanic';
         /* text-align: center; */
       }
       h1{
@@ -176,5 +184,9 @@ const Container = styled.div`
     .content .cards{
       grid-template-columns: repeat(1, 1fr);
     }
+  }
+  .preload{
+    display: none;
+    background-image: url("https://cdn.dribbble.com/users/6122742/screenshots/14295571/media/381fb89b3ce7f5c20a47fa571fd6f9c1.png?resize=800x600&vertical=center"), url("https://cdn.dribbble.com/userupload/3997911/file/original-350d2997a5429cb1e2a5983bbdb08260.png"), url("https://cdn.dribbble.com/users/6122742/screenshots/14295554/media/b185dabe5661311fa0347507e36dea87.png?resize=800x600&vertical=center"), url("https://cdn.dribbble.com/users/6122742/screenshots/15826169/media/f6dedbf36ecb550832c9d4c428a6a3b3.png"); 
   }
 `
