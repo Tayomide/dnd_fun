@@ -59,8 +59,9 @@ const Container = styled.nav`
         border: 1px solid #bdd9c9;
         color: #ffffff;
         width: max-content;
+        margin: 0;
         padding: 0 1em;
-        display: inline-flex;
+        display: flex;
         align-items: center;
         cursor: pointer;
         transition: box-shadow 0.3s ease;
@@ -71,10 +72,9 @@ const Container = styled.nav`
       }
       a{
         text-decoration: none;
-        img{
-          height: 50%;
-          color: #ffffff;
-          fill: #ffffff;
+        svg{
+          height: 1em;
+          width: 1.5em;
         }
       }
     }

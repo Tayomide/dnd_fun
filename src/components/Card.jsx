@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const Card = ({
-  name, img_url, hover_url, link
+  name, img_url, hover_url, link, blend_mode
 }) => {
   const [hovered, setHovered] = useState(false)
 
   return (
-    <Container onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)} to={link} rel="noreferrer" target='_blank'>
+    <Container onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)} to={link} rel="noreferrer" target='_blank' className={(blend_mode && hovered) ? 'blend' : ''}>
       <h3>{name}</h3>
-      <img src={hover_url ? hovered ? hover_url : img_url : img_url} alt={name} />
+      <img src={(!blend_mode && hover_url) ? hovered ? hover_url : img_url : img_url} alt={name} />
     </Container>
   )
 }
@@ -23,6 +23,10 @@ const Container = styled(Link)`
   height: 20em;
   display: block;
   cursor: pointer;
+  text-decoration: none;
+  &.blend img{
+    mix-blend-mode: hard-light;
+  }
   h3{
     font-family: 'Arrancar';
     border-radius: 0.25em 0.25em 0 0;
